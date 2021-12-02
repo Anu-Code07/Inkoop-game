@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shooting Inkoop</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1 class="text-center display-3 font-weight-bold">Shooting Game</h1>
+      <div class="game">
+        <div class="player">
+          <button class="btn-primary btn p1">Player 1</button>
+          <span id="hlth1">Health:100</span>
+          <p class="font-weight-bold score_size" id="P1_firescore">Score:0</p>
+        </div>
+        <div class="player">
+          <button class="btn-primary btn p2">Player 2</button>
+          <span id="hlth2">Health:100</span>
+          <p class="font-weight-bold score_size" id="P2_firescore">Score:0</p>
+        </div>
+      </div>
+      <div class="fire">
+        <button
+          class="btn btn-danger m-2 font-weight-bold"
+          id="shoot"
+          onclick="shoot()"
+        >
+          Shoot
+        </button>
+        <button class="btn btn-success m-2" onclick="reset()">
+          Play again!
+        </button>
+      </div>
+      <div class="scoreboard">
+        <table class="table table-stripped table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col" class="text-center">PLAYERS</th>
+              <th scope="col" class="text-center">WINS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-center">Player 1</th>
+              <td class="text-center" id="wins1">0</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-center">Player 2</th>
+              <td class="text-center" id="wins2">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="results">
+          <p class="display-4 text-center" id="won">Player Has Won!</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
